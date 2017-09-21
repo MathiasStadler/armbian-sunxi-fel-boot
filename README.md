@@ -24,10 +24,10 @@
 # TL;DR
 - This is  the TL;DR version
 
-> git clone https://github.com/MathiasStadler/armbian-sunxi-fel-boot
-> chmod +x run.sh
-> cross the fingers
-> ./run.sh
+> - git clone https://github.com/MathiasStadler/armbian-sunxi-fel-boot
+> - chmod +x run.sh
+> - cross the fingers
+> - ./run.sh
 
 - for more details read and visit the linked  website and repos
 
@@ -36,7 +36,7 @@
 - a screenshot , a one liner ... is more as enough
 
 
-# necessary hardware
+# Necessary hardware
 - orange pi SBC - i'm tested that with a orange pi plus 
 - Power adapter for SBC 
 - USB cable for the OTG USB plug
