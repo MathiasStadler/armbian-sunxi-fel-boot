@@ -51,7 +51,6 @@
 >    -   vagrant-disksize  for armbian vagrant based env
 >    -   vagrant-vbguest for your convenience
 
-- install vagrant plugin 
 - ```vagrant plugin install vagrant-disksize```
 - ```vagrant plugin install vagrant-vbguest```    
 
@@ -71,27 +70,27 @@
 - the next thing make the provisioning_script inside the Vagrantfile
 - ```vagrant up```
 
-> You can start every time from scratch
-> Attention you loss all your work, data ....
-> Think before and maybe make a copy before
-> - logout if you inside the box 
+> - You can start every time from scratch
+> - Attention you loss all your work, data ....
+> - Think before and maybe make a copy before
+> - set a passwd for user ubuntu
+> -     ```passwd ubuntu```
+> - logout out 
 >   - ```exit```
 > - stop vagrant box
 >   - ```vagrant halt```
 > - get list all names of boxes/vm
 >   - ```vboxmanage  list vms```
 > - clone box 
+>   - ```vboxmanage clonevm --snapshot "<CURRENT VM NAME>" --name "<NAME_OF_COPY>"  --register```
+>   - e.g.
 >   - ```vboxmanage clonevm --snapshot "Armbian Builder" --name "Armbian Builder save"  --register```
-> - start new box  destroy > up 
+> -  rerun a new box  destroy > up 
 >   - ```vagrant destroy```
->   - ``` vagrant up```
-
-
+>   - ```vagrant up```
 
 7. execute the  provisioning_script
     - is start with the command vagrant up
-
-
 
 # unsorted
 - [Github mastering markdown](https://guides.github.com/features/mastering-markdown/)
