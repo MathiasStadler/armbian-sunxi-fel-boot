@@ -92,12 +92,16 @@
 7. execute the  provisioning_script
     - is start with the command vagrant up
 
+# CHanges inside the Vagrantfile
+- TODO What & why
+
 
 # Wiki 
 ## Fel Mode [https://linux-sunxi.org/FEL]
-
+cd 
 
 # unsorted
 - [Github mastering markdown](https://guides.github.com/features/mastering-markdown/)
 
- 
+- [Power button orangepiplus](https://parglescouk.wordpress.com/2016/08/30/shutting-down-an-orange-pi-from-the-on-board-button/)
+ - https://github.com/jernejsk/OpenELEC-OPi2/issues/12
