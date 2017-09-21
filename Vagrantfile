@@ -13,6 +13,8 @@ git clone https://github.com/armbian/build /home/ubuntu/armbian
 mkdir -p /vagrant/output /vagrant/userpatches
 ln -sf /vagrant/output /home/ubuntu/armbian/output
 ln -sf /vagrant/userpatches /home/ubuntu/armbian/userpatches
+cp config/templates/fel-boot.cmd.template userpatches/fel-boot.cmd
+
 SCRIPT
 
 Vagrant.configure(2) do |config|
