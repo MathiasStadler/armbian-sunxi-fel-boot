@@ -92,6 +92,11 @@
 7. execute the  provisioning_script
     - is start with the command vagrant up
 
+
+# Wiki 
+## Fel Mode [https://linux-sunxi.org/FEL]
+
+
 # unsorted
 - [Github mastering markdown](https://guides.github.com/features/mastering-markdown/)
 

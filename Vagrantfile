@@ -10,6 +10,23 @@ git clone https://github.com/armbian/build /home/ubuntu/armbian
 mkdir -p /vagrant/output /vagrant/userpatches
 ln -sf /vagrant/output /home/ubuntu/armbian/output
 ln -sf /vagrant/userpatches /home/ubuntu/armbian/userpatches
+cd
+cd armbian
+sudo ./compile.sh
+#install sunix-tools
+apt-get install -y libusb-1.0-0-dev pkg-config
+cd
+git clone https://github.com/linux-sunxi/sunxi-tools sunxi-tools
+cd sunxi-tools
+make tools
+sudo make install-tools
+cd
+#tutorial from here
+#http://linux-sunxi.org/FEL/USBBoot#Legacy_u-boot-sunxi
+git clone git://git.denx.de/u-boot.git
+cd u-boot
+
+sudo apt-get update && sudo apt-get upgrade && sudo apt-get autoclean
 SCRIPT
 
 Vagrant.configure(2) do |config|
@@ -17,6 +34,8 @@ Vagrant.configure(2) do |config|
     # What box should we base this build on?
     config.vm.box = "ubuntu/xenial64"
 
+
+    
     #######################################################################
     # THIS REQUIRES YOU TO INSTALL A PLUGIN. RUN THE COMMAND BELOW...
     #

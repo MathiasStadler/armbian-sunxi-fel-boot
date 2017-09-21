@@ -29,11 +29,12 @@ echo "vagrant up"
 echo "the next thning make the provisioning_script inside the Vagrantfile"
 vagrant up
 
-vagrant status
-#popd
+#vagrant status
+popd
 
-
-echo "Login inside Box type"
+echo "\n\n\n"
+echo "change to armbian-vagrant"
+echo "type simple for Login inside Box"
 echo "vagrant ssh"
 
 
