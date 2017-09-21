@@ -24,10 +24,10 @@
 # TL;DR
 - This is  the TL;DR version
 
-> - git clone https://github.com/MathiasStadler/armbian-sunxi-fel-boot
-> - chmod +x run.sh
+> - ```git clone https://github.com/MathiasStadler/armbian-sunxi-fel-boot```
+> - ```chmod +x run.sh```
 > - cross the fingers
-> - ./run.sh
+> - ```./run.sh```
 
 - for more details read and visit the linked  website and repos
 
