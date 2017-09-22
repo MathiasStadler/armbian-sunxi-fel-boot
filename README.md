@@ -125,16 +125,16 @@ found the ip from the dhcp server and set in userpatches/fel-boot.cmd as FEL_LOC
 - To verify you have successfully entered FEL mode, check the output of fel version. For the Orange Pi Plus, it should look like:
 ```lsusb
 Bus 001 Device 002: ID 1f3a:efe8 Onda (unverified) V972 tablet in flashing mode```
-```sudo sunxi-fel version
-AWUSBFEX soc=00001680(H3) 00000001 ver=0001 44 08 scratchpad=00007e00 00000000 00000000```
+```sudo sunxi-fel version```
+
+- the output should be for a orangepi plus SBC
+```AWUSBFEX soc=00001680(H3) 00000001 ver=0001 44 08 scratchpad=00007e00 00000000 00000000```
 
 
 # compile and start FEL modus 
 - the command above should run inside the vagrant box
 - follow the instruction after the compile phase
 - ```/compile.sh KERNEL_ONLY=no KERNEL_CONFIGURE=no BOARD=orangepiplus BRANCH=next PROGRESS_DISPLAY=plain RELEASE=xenial BUILD_DESKTOP=yes ROOTFS_TYPE=fel.```
-
-
 
 # get ip from adapter with mac address
 - IP_LINK_ADDR=$(ip -o address |grep -v inet6 | grep $(ip -o link |grep aa:bb:cc:dd:ee:ff|awk {'print $2'}|sed 's/://') | awk {'print $4'}|cut -d \/ -f 1)
