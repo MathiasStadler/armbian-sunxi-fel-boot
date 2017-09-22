@@ -18,15 +18,15 @@ git clone https://github.com/armbian/build /home/ubuntu/armbian
 mkdir -p /vagrant/output /vagrant/userpatches
 ln -sf /vagrant/output /home/ubuntu/armbian/output
 ln -sf /vagrant/userpatches /home/ubuntu/armbian/userpatches
-cp config/templates/fel-boot.cmd.template userpatches/fel-boot.cmd
+cp /home/ubuntu/armbian/config/templates/fel-boot.cmd.template /home/ubuntu/armbian/userpatches/fel-boot.cmd
 #Get the ip from the bdridge device detect by custom MAC address
-IP_LINK_ADDR=$(ip -o address |grep -v inet6 | grep $(ip -o link |grep box_bridge_mac_addr|awk {'print $2'}|sed 's/://') | awk {'print $4'}|cut -d / -f 1)
+IP_LINK_ADDR=$(ip -o address |grep -v inet6 | grep $(ip -o link |grep BOX_BRIDGE_MAC_ADDR|awk {'print $2'}|sed 's/://') | awk {'print $4'}|cut -d / -f 1)
 echo $IPLINK_ADDR
 #Set/replace the IP address for the NFS server for the FEL-BOOT
-sed -i "s/FEL_LOCAL_IP/$(echo $IP_LINK_ADDR)/g" userpatches/fel-boot.cmd
+sed -i "s/FEL_LOCAL_IP/$(echo $IP_LINK_ADDR)/g" /home/ubuntu/armbian/userpatches/fel-boot.cmd
 SCRIPT
 
-provisioning_script.gsub(/box_bridge_mac_addr/, box_bridge_mac_addr)
+provisioning_script.gsub(/BOX_BRIDGE_MAC_ADDR/,box_bridge_mac_addr)
 
 Vagrant.configure(2) do |config|
 
