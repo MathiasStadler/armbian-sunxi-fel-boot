@@ -74,20 +74,20 @@
 > - Attention you loss all your work, data ....
 > - Think before and maybe make a copy before
 > - set a passwd for user ubuntu
-> -     ```passwd ubuntu```
+> - ```passwd ubuntu```
 > - logout out 
->   - ```exit```
+> - ```exit```
 > - stop vagrant box
->   - ```vagrant halt```
+> - ```vagrant halt```
 > - get list all names of boxes/vm
->   - ```vboxmanage  list vms```
+> - ```vboxmanage  list vms```
 > - clone box 
->   - ```vboxmanage clonevm --snapshot "<CURRENT VM NAME>" --name "<NAME_OF_COPY>"  --register```
->   - e.g.
->   - ```vboxmanage clonevm --snapshot "Armbian Builder" --name "Armbian Builder save"  --register```
+> - ```vboxmanage clonevm --snapshot "<CURRENT VM NAME>" --name "<NAME_OF_COPY>" --register```
+> - e.g.
+> - ```vboxmanage clonevm --snapshot "Armbian Builder" --name "Armbian Builder save" --register```
 > -  rerun a new box  destroy > up 
->   - ```vagrant destroy```
->   - ```vagrant up```
+> - ```vagrant destroy```
+> - ```vagrant up```
 
 7. execute the  provisioning_script
     - is start with the command vagrant up
