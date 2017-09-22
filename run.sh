@@ -22,6 +22,8 @@ cp Vagrantfile Vagrantfile_save
 echo "replace Vagrantfile"
 cp ../Vagrantfile Vagrantfile
 
+cp ../compile_and_start_felmode* .
+
 echo "vagrant box update => we will work with the last version"
 vagrant box update
 

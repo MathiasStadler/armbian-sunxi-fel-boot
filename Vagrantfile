@@ -12,6 +12,8 @@ Vagrant.require_version ">= 1.5"
 
 #provisioning script runs once after the first vagrant up as user ubuntu
 provisioning_script = <<SCRIPT
+#in the case rerun the of vagrant provision command delete folder armbian
+rm -rf /home/ubuntu/armbian
 # use remote git version instead of sharing a copy from host to preserve proper file permissions
 # and prevent permission related issues for the temp directory
 git clone https://github.com/armbian/build /home/ubuntu/armbian
@@ -20,13 +22,13 @@ ln -sf /vagrant/output /home/ubuntu/armbian/output
 ln -sf /vagrant/userpatches /home/ubuntu/armbian/userpatches
 cp /home/ubuntu/armbian/config/templates/fel-boot.cmd.template /home/ubuntu/armbian/userpatches/fel-boot.cmd
 #Get the ip from the bdridge device detect by custom MAC address
-IP_LINK_ADDR=$(ip -o address |grep -v inet6 | grep $(ip -o link |grep BOX_BRIDGE_MAC_ADDR|awk {'print $2'}|sed 's/://') | awk {'print $4'}|cut -d / -f 1)
+IP_LINK_ADDR=$(ip -o address |grep -v inet6 | grep $(ip -o link |grep aa:bb:cc:dd:ee:ff|awk {'print $2'}|sed 's/://') | awk {'print $4'}|cut -d / -f 1)
 echo $IPLINK_ADDR
 #Set/replace the IP address for the NFS server for the FEL-BOOT
 sed -i "s/FEL_LOCAL_IP/$(echo $IP_LINK_ADDR)/g" /home/ubuntu/armbian/userpatches/fel-boot.cmd
 SCRIPT
 
-provisioning_script.gsub(/BOX_BRIDGE_MAC_ADDR/,box_bridge_mac_addr)
+#provisioning_script = provisioning_script.gsub(/BOX_BRIDGE_MAC_ADDR/,box_bridge_mac_addr)
 
 Vagrant.configure(2) do |config|
 
@@ -47,6 +49,8 @@ config.vm.network "public_network", type: "dhcp", bridge: "eno1" , :mac => box_b
 
     # provisioning: install dependencies, download the repository copy
     config.vm.provision "shell", inline: provisioning_script
+
+    config.vm.provision "file", source: "compile_and_start_felmode_orangepiplus.sh", destination: "compile_and_start_felmode_orangepiplus.sh"
 
     # forward terminal type for better compatibility with Dialog - disabled on Ubuntu by default
     config.ssh.forward_env = ["TERM"]
