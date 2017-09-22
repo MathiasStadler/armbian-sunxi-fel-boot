@@ -26,8 +26,9 @@ IP_LINK_ADDR=$(ip -o address |grep -v inet6 | grep $(ip -o link |grep aa:bb:cc:d
 echo $IPLINK_ADDR
 #Set/replace the IP address for the NFS server for the FEL-BOOT
 sed -i "s/FEL_LOCAL_IP/$(echo $IP_LINK_ADDR)/g" /home/ubuntu/armbian/userpatches/fel-boot.cmd
-vi SCRIPT
+SCRIPT
 
+#TODO set MAC address in provisioning_script
 #provisioning_script = provisioning_script.gsub(/BOX_BRIDGE_MAC_ADDR/,box_bridge_mac_addr)
 
 Vagrant.configure(2) do |config|
