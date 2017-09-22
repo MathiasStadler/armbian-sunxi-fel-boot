@@ -118,15 +118,16 @@ found the ip from the dhcp server and set in userpatches/fel-boot.cmd as FEL_LOC
 
 
 
- # entry FEL MODE
- ## OrangePi plus
- - [Info from here](http://linux-sunxi.org/Xunlong_Orange_Pi_Plus)
- - The button marked SW3, located between the HDMI and SATA, triggers FEL mode when pressed during boot. (SW3 pulls the H3 BOOTSEL pin to low level.)
-- To verify you have successfully entered FEL mode, check the output of fel version. For the Orange Pi Plus, it should look like:
-```lsusb
-Bus 001 Device 002: ID 1f3a:efe8 Onda (unverified) V972 tablet in flashing mode```
+# entry FEL MODE
+## OrangePi plus
+- details see here please =>  http://linux-sunxi.org/Xunlong_Orange_Pi_Plus
+- The button marked SW3, located between the HDMI and SATA, triggers FEL mode when pressed during boot. 
+- (SW3 pulls the H3 BOOTSEL pin to low level.)
+- To verify you have successfully entered FEL mode, check the output of fel version. 
+- For the Orange Pi Plus, it should look like:
+```lsusb```
+```Bus 001 Device 002: ID 1f3a:efe8 Onda (unverified) V972 tablet in flashing mode```
 ```sudo sunxi-fel version```
-
 - the output should be for a orangepi plus SBC
 ```AWUSBFEX soc=00001680(H3) 00000001 ver=0001 44 08 scratchpad=00007e00 00000000 00000000```
 
