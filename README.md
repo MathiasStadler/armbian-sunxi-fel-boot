@@ -1,28 +1,6 @@
 # armbian-sunxi-fel-boot
 
-# Prepared 
-- take a big cup of coffee :-)
-- check you already installed  
-    - git 
-    - vagrant
-    - virtualbox 
-     
-
-# Tag 
-- sunxi 
-- orangepi 
-- [ one, plus, zero] 
-- H3 
-- armbian
-
-# Motivation  
-- convenience
-- Boot a orangepi SBC without SD card
-
-
 # TL;DR
-- This is  the TL;DR version
-
 > - ```git clone https://github.com/MathiasStadler/armbian-sunxi-fel-boot```
 > - ```chmod +x run.sh```
 > - cross the fingers
@@ -31,10 +9,36 @@
 > - ```vagrant ssh```
 > - ```chmod +x compile_and_start_felmode_orangepiplus.sh```
 > - ```./compile_and_start_felmode_orangepiplus.sh```
+> - follow the instruction after the compile and image prepare phase 
 > - for more details read and visit the linked  website and repos
+
+# Hint and Errors
+- if you find any .... please let me know that => stadler-mathias@web.de
+- a screenshot , a one liner ... is more as enough
+
+# Preparations 
+- take a big cup of coffee :-)
+- check you already installed  
+    - git 
+    - vagrant
+    - virtualbox & Extension Pack for USB support
+
+     
+
+# Tag 
+- sunxi 
+- orangepi one, plus, zero 
+- H3 
+- armbian
+
+# Motivation  
+- convenience
+- Boot a orangepi SBC without prepare every time a SD card for booting
 
 
 # entry FEL MODE
+- the vagrant box is already prepare with the usb filter
+
 ## OrangePi plus
 - details see here please =>  http://linux-sunxi.org/Xunlong_Orange_Pi_Plus
 - The button marked SW3, located between the HDMI and SATA, triggers FEL mode when pressed during boot. 
@@ -46,14 +50,6 @@
 ```sudo sunxi-fel version```
 - the output should be for a orangepi plus SBC
 ```AWUSBFEX soc=00001680(H3) 00000001 ver=0001 44 08 scratchpad=00007e00 00000000 00000000```
-
-
-
-
-
-# Hint and Errors
-- if you find any .... please let me know that => stadler-mathias@web.de
-- a screenshot , a one liner ... is more as enough
 
 
 # Necessary hardware
@@ -112,13 +108,14 @@
 7. execute the  provisioning_script
     - is start with the command vagrant up
 
-# CHanges inside the Vagrantfile
-- TODO What & why
-
+# Changes inside the Vagrantfile
+- add a 2nd bridge network adapter with custom MAC address 
+- add USB filter for orange pi H3 OTG USB 
+- add the the copy command for  fel-bbot.sh script and set the IP address from the 2nd network adapter. So is NFS boot possible.  
 
 # Wiki 
 ## Fel Mode [https://linux-sunxi.org/FEL]
-cd 
+
 
 # unsorted
 - [Github mastering markdown](https://guides.github.com/features/mastering-markdown/)
@@ -127,27 +124,14 @@ cd
  - https://github.com/jernejsk/OpenELEC-OPi2/issues/12
 
 
-
- # TODO
- - https://docs.armbian.com/Developer-Guide_FEL-boot/#advanced-configuration
- - ```cd && cd armbian```
- - ```cp config/templates/fel-boot.cmd.template userpatches/fel-boot.cmd```
-
-# TODO 1
-found the ip from the dhcp server and set in userpatches/fel-boot.cmd as FEL_LOCAL_IP
-
-
-
-
-
-# compile and start FEL modus 
+# custom script for compile and start FEL modus 
 - the command above should run inside the vagrant box
 - follow the instruction after the compile phase
 - ```/compile.sh KERNEL_ONLY=no KERNEL_CONFIGURE=no BOARD=orangepiplus BRANCH=next PROGRESS_DISPLAY=plain RELEASE=xenial BUILD_DESKTOP=yes ROOTFS_TYPE=fel.```
 
-# get ip from adapter with mac address
+# get ip from adapter with custom mac address
 - IP_LINK_ADDR=$(ip -o address |grep -v inet6 | grep $(ip -o link |grep aa:bb:cc:dd:ee:ff|awk {'print $2'}|sed 's/://') | awk {'print $4'}|cut -d \/ -f 1)
 
-# replace with ip addr
+# sed command for replace placeholder FEL_LOCAL_IP with ip addr of 2nd network adapter
 - ```sed -i "s/FEL_LOCAL_IP/$(echo $IP_LINK_ADDR)/g" userpatches/fel-boot.cmd```
-- please notice the double quotas  
+- please notice the double quotas for substitute the shell variable in the sed command   
