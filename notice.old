@@ -1,0 +1,12 @@
+#install sunix-tools
+apt-get install -y libusb-1.0-0-dev pkg-config
+cd
+git clone https://github.com/linux-sunxi/sunxi-tools sunxi-tools
+cd sunxi-tools
+make toolsvi 
+sudo make install-tools
+cd
+#tutorial from here
+#http://linux-sunxi.org/FEL/USBBoot#Legacy_u-boot-sunxi
+git clone git://git.denx.de/u-boot.git
+cd u-boot
