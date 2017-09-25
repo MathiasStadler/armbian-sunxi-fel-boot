@@ -1,5 +1,7 @@
 # armbian-sunxi-fel-boot
 
+#Version 0.0.1
+
 # TL;DR
 > - ```git clone https://github.com/MathiasStadler/armbian-sunxi-fel-boot```
 > - ```chmod +x run.sh```
