@@ -19,13 +19,12 @@
 - a screenshot , a one liner ... is more than enough
 
 # Preparations 
-- take a big cup of coffee :-)
-- check you already installed  
+- have a big cup of coffee :-)
+- check whether you already installed:   
     - git 
     - vagrant
     - virtualbox & Extension Pack for USB support
-
-     
+    
 
 # Tag 
 - sunxi 
