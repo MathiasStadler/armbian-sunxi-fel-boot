@@ -16,7 +16,7 @@
 
 # Hints and Errors
 - if you find any .... please let me know => stadler-mathias@web.de
-- a screenshot , a one liner ... is more as enough
+- a screenshot , a one liner ... is more than enough
 
 # Preparations 
 - take a big cup of coffee :-)
