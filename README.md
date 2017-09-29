@@ -12,7 +12,7 @@
 > - ```chmod +x compile_and_start_felmode_orangepiplus.sh```
 > - ```./compile_and_start_felmode_orangepiplus.sh```
 > - follow the instruction after the compilation and image preparation phase 
-> - for more details read and visit the linked  website and repos
+> - for more details please visit the linked  website and repos
 
 # Hint and Errors
 - if you find any .... please let me know that => stadler-mathias@web.de
