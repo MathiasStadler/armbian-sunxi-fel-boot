@@ -14,8 +14,8 @@
 > - follow the instruction after the compilation and image preparation phase 
 > - for more details please visit the linked  website and repos
 
-# Hint and Errors
-- if you find any .... please let me know that => stadler-mathias@web.de
+# Hints and Errors
+- if you find any .... please let me know => stadler-mathias@web.de
 - a screenshot , a one liner ... is more as enough
 
 # Preparations 
