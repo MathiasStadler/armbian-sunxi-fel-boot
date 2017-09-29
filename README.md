@@ -5,7 +5,7 @@
 # TL;DR
 > - ```git clone https://github.com/MathiasStadler/armbian-sunxi-fel-boot```
 > - ```chmod +x run.sh```
-> - cross the fingers
+> - cross fingers
 > - ```./run.sh```
 > - ```cd armbian-vagrant```
 > - ```vagrant ssh```
