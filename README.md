@@ -11,7 +11,7 @@
 > - ```vagrant ssh```
 > - ```chmod +x compile_and_start_felmode_orangepiplus.sh```
 > - ```./compile_and_start_felmode_orangepiplus.sh```
-> - follow the instruction after the compile and image prepare phase 
+> - follow the instruction after the compilation and image preparation phase 
 > - for more details read and visit the linked  website and repos
 
 # Hint and Errors
