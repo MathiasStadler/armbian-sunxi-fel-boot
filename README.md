@@ -34,7 +34,7 @@
 
 # Motivation  
 - convenience
-- Boot a orangepi SBC without prepare every time a SD card for booting
+- Booting an orangepi SBC (Single Board computer) without prepare every time a SD card for booting
 
 
 # entry FEL MODE
@@ -136,3 +136,7 @@
 # sed command for replace placeholder FEL_LOCAL_IP with ip addr of 2nd network adapter
 - ```sed -i "s/FEL_LOCAL_IP/$(echo $IP_LINK_ADDR)/g" userpatches/fel-boot.cmd```
 - please notice the double quotas for substitute the shell variable in the sed command   
+
+
+
+# network driver 
