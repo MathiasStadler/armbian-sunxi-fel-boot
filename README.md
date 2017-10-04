@@ -87,32 +87,35 @@
 - the next thing is to make the provisioning_script inside the Vagrantfile
 - ```vagrant up```
 
-> - You can start every time from scratch
-> - Attention you loss all your work, data ....
+> - You can start every time from a scratch
+> - Attention you lose all your work, data etc....
 > - Think before and maybe make a copy before
-> - set a passwd for user ubuntu
+> - Don't forget set a password for ubuntu.
+> - Otherwise, you can not login your copy of vm.
+> - All your work is gone. :-() 
 > - ```passwd ubuntu```
-> - logout out 
+> - logout 
 > - ```exit```
 > - stop vagrant box
 > - ```vagrant halt```
-> - get list all names of boxes/vm
+> - get list of all box/vm  names 
 > - ```vboxmanage  list vms```
-> - clone box 
+> - clone the box 
 > - ```vboxmanage clonevm --snapshot "<CURRENT VM NAME>" --name "<NAME_OF_COPY>" --register```
 > - e.g.
 > - ```vboxmanage clonevm --snapshot "Armbian Builder" --name "Armbian Builder save" --register```
-> -  rerun a new box  destroy > up 
+> - you can destroy the box and restart a new version of 
 > - ```vagrant destroy```
 > - ```vagrant up```
 
 7. execute the  provisioning_script
-    - is start with the command vagrant up
+    - script starts with the command 
+    ```vagrant up```
 
 # Changes inside the Vagrantfile
-- add a 2nd bridge network adapter with custom MAC address 
-- add USB filter for orange pi H3 OTG USB 
-- add the the copy command for  fel-bbot.sh script and set the IP address from the 2nd network adapter. So is NFS boot possible.  
+- add the 2nd bridge network adapter with a custom MAC address 
+- add USB filter for "orange pi H3 OTG USB PORT" 
+- add the the copy command for  fel-boot.sh script and set the IP address from the 2nd network adapter. So is NFS boot possible.  
 
 # Wiki 
 ## Fel Mode [https://linux-sunxi.org/FEL]
