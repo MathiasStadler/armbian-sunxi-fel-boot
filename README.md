@@ -38,7 +38,7 @@
 
 
 # entry FEL MODE
-- the vagrant box is already prepare with the virtualbox usb filter
+- the vagrant box is already prepared with the virtualbox usb filter
 
 ## OrangePi plus
 - details see here please =>  http://linux-sunxi.org/Xunlong_Orange_Pi_Plus
