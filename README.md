@@ -115,7 +115,7 @@
 # Changes inside the Vagrantfile
 - add the 2nd bridge network adapter with a custom MAC address 
 - add USB filter for "orange pi H3 OTG USB PORT" 
-- add the the copy command for  fel-boot.sh script and set the IP address from the 2nd network adapter. So is NFS boot possible.  
+- add the the copy command for fel-boot.sh script and set the IP address from the 2nd network adapter. So is NFS boot is possible.  
 
 # Wiki 
 ## Fel Mode [https://linux-sunxi.org/FEL]
