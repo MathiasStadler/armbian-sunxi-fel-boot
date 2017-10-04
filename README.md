@@ -20,7 +20,7 @@
 
 # Preparations 
 - have a big cup of coffee :-)
-- check whether you already installed:   
+- check whether you have already installed:   
     - git 
     - vagrant
     - virtualbox & Extension Pack for USB support
