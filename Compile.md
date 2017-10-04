@@ -65,18 +65,10 @@ make $CTHREADS ARCH=$ARCHITECTURE CROSS_COMPILE="$CCACHE $KERNEL_COMPILER" LOCAL
 ```
 make $CTHREADS ARCH=$ARCHITECTURE CROSS_COMPILE="$CCACHE $KERNEL_COMPILER"  LOCALVERSION="-$LINUXFAMILY" KSRC=/home/ubuntu//armbian/cache/sources/linux-mainline/linux-4.13.y/debian/hdrtmp/usr/src/linux-headers-4.13.4-sunxi SHELL="sh -x"
 
-make $CTHREADS ARCH=$ARCHITECTURE CROSS_COMPILE="ccache arm-linux-gnueabihf-gcc"      LOCALVERSION="-$LINUXFAMILY" KSRC=/home/ubuntu//armbian/cache/sources/linux-    mainline/linux-4.13.y/debian/hdrtmp/usr/src/linux-headers-4.13.4-sunxi SHELL    ="sh -x"
+
+make $CTHREADS ARCH=$ARCHITECTURE CROSS_COMPILE="$CCACHE $KERNEL_COMPILER"  LOCALVERSION="-$LINUXFAMILY" KSRC=/home/ubuntu//armbian/cache/sources/linux-mainline/linux-4.13.y SHELL="sh -x"
 
 
-make $CTHREADS ARCH=$ARCHITECTURE CROSS_COMPILE="ccache arm-linux-gnueabihf-gcc"  LOCALVERSION="-$LINUXFAMILY" KSRC=/home/ubuntu//armbian/cache/sources/linux-mainline/linux-4.13.y SHELL="sh -x " >t2 2>t2
-
-
-http://makepp.sourceforge.net/gallery/
-http://makepp.sourceforge.net/
-https://stackoverflow.com/questions/14563302/build-a-makefile-dependency-inheritance-tree
-
-https://stackoverflow.com/questions/5032269/backtrace-for-gnu-make
-remake
 
 # explain ccache
 - https://askubuntu.com/questions/470545/how-do-i-set-up-ccache

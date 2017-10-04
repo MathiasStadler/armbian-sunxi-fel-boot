@@ -34,11 +34,11 @@
 
 # Motivation  
 - convenience
-- Booting an orangepi SBC (Single Board computer) without prepare every time a SD card for booting
+- Booting an ORANGEPI SBC (Single Board computer) without preparing of a SD card for booting
 
 
 # entry FEL MODE
-- the vagrant box is already prepare with the usb filter
+- the vagrant box is already prepare with the virtualbox usb filter
 
 ## OrangePi plus
 - details see here please =>  http://linux-sunxi.org/Xunlong_Orange_Pi_Plus
