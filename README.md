@@ -41,15 +41,15 @@
 - the vagrant box is already prepared with the virtualbox usb filter
 
 ## OrangePi plus
-- details see here please =>  http://linux-sunxi.org/Xunlong_Orange_Pi_Plus
-- The button marked SW3, located between the HDMI and SATA, triggers FEL mode when pressed during boot. 
+- please see details here =>  http://linux-sunxi.org/Xunlong_Orange_Pi_Plus
+- The button marked SW3, located between the HDMI and SATA, triggers FEL mode when pressed during a boot. 
 - (SW3 pulls the H3 BOOTSEL pin to low level.)
-- To verify you have successfully entered FEL mode, check the output of fel version. 
-- For the Orange Pi Plus, it should look like:
+- To verify you have successfully entered FEL mode, check the output of FEL version. 
+- For the Orange Pi Plus, it should look like on the command line:
 ```lsusb```
 ```Bus 001 Device 002: ID 1f3a:efe8 Onda (unverified) V972 tablet in flashing mode```
 ```sudo sunxi-fel version```
-- the output should be for a orangepi plus SBC
+- the output should be for an orangepi plus SBC
 ```AWUSBFEX soc=00001680(H3) 00000001 ver=0001 44 08 scratchpad=00007e00 00000000 00000000```
 
 
