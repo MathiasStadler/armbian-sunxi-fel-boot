@@ -54,10 +54,10 @@
 
 
 # Necessary hardware
-- orange pi SBC - i'm tested that with a orange pi plus 
+- orange pi SBC - i have tested with a orange pi plus 
 - Power adapter for SBC 
 - USB cable for the OTG USB plug
-- serial console - I'm used a FTD1232 <=> usb adapter 3,3 Volt  
+- serial console - I have used a FTD1232 <=> usb adapter 3,3 Volt  
 
 
 # procedure of run.sh
@@ -74,7 +74,7 @@
 2. clone the vagrant version of armbian vagrant
 - ```git clone https://github.com/igorpecovnik/lib.git armbian-vagrant```
 
-3. echo "change to armbian-vagrant folder"
+3. change to armbian-vagrant folder
 - ```cd armbian-vagrant```
 
 4. save orginal Vagrantfile 
@@ -84,7 +84,7 @@
 ```cp ../Vagrantfile Vagrantfile```
 
 6. start vagrant box 
-- the next thing make the provisioning_script inside the Vagrantfile
+- the next thing is to make the provisioning_script inside the Vagrantfile
 - ```vagrant up```
 
 > - You can start every time from scratch
